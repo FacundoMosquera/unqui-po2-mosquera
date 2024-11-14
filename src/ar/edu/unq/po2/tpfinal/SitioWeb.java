@@ -3,6 +3,7 @@ package ar.edu.unq.po2.tpfinal;
 import java.util.List;
 
 import ar.edu.unq.po2.tpfinal.filtro.Filtro;
+import ar.edu.unq.po2.tpfinal.inmueble.Inmueble;
 
 public abstract class SitioWeb {
 	
@@ -24,5 +25,7 @@ public abstract class SitioWeb {
 		List<Inmueble> mueblesFiltrados = searchEngine.filtrar(filtros, inmueblesRegistrados);
 		return mueblesFiltrados;
 	}
+	
+	public void eliminarInmueble(Inmueble inmueble) {inmueblesRegistrados.remove(inmueble);}
 	
 }
