@@ -2,14 +2,11 @@ package ar.edu.unq.po2.tpfinal.inmueble;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.time.LocalDate;
 import java.util.List;
 
 import ar.edu.unq.po2.tpfinal.FormaDePago;
 import ar.edu.unq.po2.tpfinal.Foto;
 import ar.edu.unq.po2.tpfinal.PeriodoDisponible;
-import ar.edu.unq.po2.tpfinal.TipoInmueble;
 import ar.edu.unq.po2.tpfinal.Usuario;
 import ar.edu.unq.po2.tpfinal.politicas.PoliticaDeCancelacion;
 
@@ -103,7 +100,21 @@ public class Inmueble {
 	public List<PeriodoDisponible> getPeriodoAlquilable(){return periodoAlquilable;}
 	
 	public void visualizar() {
-		
+		System.out.println(tipoInmueble);
+		System.out.println(pais + ", " + ciudad);
+		System.out.println("Servicios incluidos: " + servicios);
+		System.out.println("Con capacidad hasta: " + capacidad);
+		System.out.println("Horario check-in: " + checkIn);
+		System.out.println("Horario check-out: " + checkOut);
+		System.out.println("Se acepta:" + formasDePago);
+		System.out.println("Se alquiló un total de" + vecesAlquilado + " veces");
+		System.out.println("Categorías: " + categoriasInmueble);
+		System.out.println("$" + precioPorDia + " por día");
+		System.out.println("Politica de cancelación: " + politicaDeCancelacion);
+		System.out.println("Disponible durante: " + periodoAlquilable);
+		System.out.println("Puntaje promedio: " + this.puntajePromedio());
+		System.out.println("Opiniones: " + this.getComentarios());
+		System.out.println("\n" + this.getPuntajes());
 	}
 	
 

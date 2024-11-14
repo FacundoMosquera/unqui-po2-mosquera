@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import ar.edu.unq.po2.tpfinal.inmueble.Inmueble;
+import ar.edu.unq.po2.tpfinal.inmueble.TipoInmueble;
 import ar.edu.unq.po2.tpfinal.politicas.PoliticaDeCancelacion;
 
 public class Usuario {
@@ -88,8 +89,14 @@ public class Usuario {
 		else {new Exception("El propietario del inmueble y quien lo publica no coinciden");}
 	}
 	
+	
 	public void darDeAltaInmueble(Inmueble i) {
 		inmuebles.remove(i);
 		sitio.eliminarInmueble(i);
 	}
+	
+	public void solicitudRecibida(SolicitudDeReserva solicitud, SolicitudHandler notificador) {
+		
+	}
+	
 }
