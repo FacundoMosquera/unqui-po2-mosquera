@@ -5,71 +5,41 @@ import java.util.List;
 
 public class Empresa {
 	
-	private String nombre;
-	private String cuit;
-	private List<Empleado> empleadosContratados;
-	private List<ReciboDeHaberes> listaDeRecibos;
+	private List<Empleado> empleados = new ArrayList<Empleado>();
+	private List<ReciboDeHaberes> recibosHaberes = new ArrayList<ReciboDeHaberes>();
 	
-	public Empresa(String n, String c) {
-		this.nombre = n;
-		this.cuit = c;
-		this.empleadosContratados = new ArrayList<Empleado>();
-		this.listaDeRecibos = new ArrayList<ReciboDeHaberes>();
-	}
-	
-	public String getNombre() {
-		return nombre;
-	}
-	
-	public String getCUIT() {
-		return cuit;
-	}
-	
-	public void contratarEmpleado(Empleado ingresante) {
-		empleadosContratados.add(ingresante);
-	}
-	
-	public void despedirEmpleado(Empleado despedido) {
-		int indice;
-		if (empleadosContratados.contains(despedido)) {
-			indice = empleadosContratados.indexOf(despedido);
-			empleadosContratados.remove(indice);
-		} else { System.out.println("Error: el empleado pertenece a la empresa"); }
-	}
-	
-	//---------------------------CALCULANDO TOTALES---------------------
-	
-	public int totalSueldosBrutos() {
-		int sueldos = 0;
-		for(Empleado empleado : empleadosContratados) {
-			sueldos += empleado.sueldoBruto();
+	public Double montoTotalRetencionesDeEmpleados() {
+		Double retenciones = (double) 0;
+		for(Empleado empleado : empleados) {
+			retenciones += empleado.getRetenciones();
 		}
-		return sueldos;
+		return retenciones;
 	}
 	
-	public float totalSuedosNetos() {
-		float sueldos = 0;
-		for(Empleado empleado : empleadosContratados) {
-			sueldos += empleado.getSueldoNeto();
+	public Double montoTotalSueldosBrutosDeEmpleados() {
+		Double sueldosBrutos = (double) 0;
+		for(Empleado empleado : empleados) {
+			sueldosBrutos += empleado.getSueldoBruto();
 		}
-		return sueldos;
+		return sueldosBrutos;
 	}
 	
-	public float totalRetenciones() {
-		float sumaRetenciones = 0;
-		for(Empleado empleado : empleadosContratados) {
-			sumaRetenciones += empleado.retenciones();
-		}
-		return sumaRetenciones;
+	public Double montoTotalSueldosNetosDeEmpleados() {
+		return montoTotalSueldosBrutosDeEmpleados() - montoTotalRetencionesDeEmpleados();
 	}
 	
-	
-	//---------------------LIQUIDACIÓN SUELDOS------------------------
 	public void liquidacionDeSueldos() {
-		for(Empleado e : empleadosContratados) {
-			this.listaDeRecibos.add(new ReciboDeHaberes(e));
+		for(Empleado e : empleados) {
+			recibosHaberes.add(new ReciboDeHaberes(e));
 		}
 	}
 	
+	public List<Empleado> getEmpleados() {return empleados;}
+	
+	public List<ReciboDeHaberes> getRecibosHaberes(){return recibosHaberes;}
+	
+	public void contratarEmpleado(Empleado e) {empleados.add(e);}
+	
+	public void despedirEmpleado(Empleado e) {empleados.remove(e);}
 	
 }

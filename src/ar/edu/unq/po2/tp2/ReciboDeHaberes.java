@@ -5,28 +5,19 @@ import java.time.LocalDate;
 public class ReciboDeHaberes {
 	
 	private String nombreEmpleado;
-	private String direccion;
+	private String direccionEmpleado;
 	private LocalDate fechaDeEmision;
-	private int sueldoBruto;
-	private float sueldoNeto;
-	private String desgloceDeConceptos;
+	private Float sueldoBruto;
+	private Float sueldoNeto;
+	private String desgloseDeConceptos;
 	
-	public ReciboDeHaberes(Empleado empleado) {
-		this.nombreEmpleado = empleado.getNombre();
-		this.direccion = empleado.getDireccion();
+	public ReciboDeHaberes(Empleado e) {
+		this.nombreEmpleado = e.getNombre();
+		this.direccionEmpleado = e.getDireccion();
 		this.fechaDeEmision = LocalDate.now();
-		this.sueldoBruto = empleado.sueldoBruto();
-		this.sueldoNeto = empleado.getSueldoNeto();
-		this.desgloceDeConceptos = "Empleado: " + this.nombreEmpleado + " " + "Direccion: " + this.direccion + "/n"
-										+ "Sueldo Bruto: "      + String.valueOf(this.sueldoBruto) + "/n"
-										+ "Sueldo Neto: "       + String.valueOf(this.sueldoNeto) + "/n"
-										+ "Total Retenciones: " + String.valueOf(empleado.retenciones()) + "/n"
-										+ "Recibo emitido el: " + String.valueOf(this.fechaDeEmision);
-				
-	}
-	
-	public String desgloceDeConceptos() {
-		return this.desgloceDeConceptos;
+		this.sueldoBruto = e.getSueldoBruto();
+		this.sueldoNeto = e.getSueldoNeto();
+		this.desgloseDeConceptos = e.conformacionSueldoBruto() + "\n" + e.detalleRetencionesAplicadas();
 	}
 	
 }

@@ -9,56 +9,51 @@ public abstract class Empleado {
 	private String direccion;
 	private String estadoCivil;
 	private LocalDate fechaDeNacimiento;
-	private int sueldoBasico;
+	private Double sueldoBasico;
 	
-	public Empleado(String nombre, String direccion, String estadoCivil, LocalDate fechaDeNacimiento, int sueldoBasico) {
+	public String getEstadoCivil() {
+		return estadoCivil;
+	}
+
+
+	public Empleado(String nombre, String direc, String estadocivil, LocalDate fnacimiento, Double sueldobasic) {
 		this.nombre = nombre;
-		this.direccion = direccion;
-		this.estadoCivil = estadoCivil;
-		this.fechaDeNacimiento = fechaDeNacimiento;
-		this.sueldoBasico = sueldoBasico;
+		this.direccion = direc;
+		this.estadoCivil = estadocivil;
+		this.fechaDeNacimiento = fnacimiento;
+		this.sueldoBasico = sueldobasic;
+	}
+	
+	public Double getSueldoBasico() {
+		return this.sueldoBasico;
 	}
 	
 	public String getNombre() {
 		return nombre;
 	}
-
+	
+	public int getEdad() {
+		LocalDate fechaActual = LocalDate.now();
+		Period p = Period.between(this.fechaDeNacimiento, fechaActual);
+		return p.getYears();
+	}
+	
 	public String getDireccion() {
 		return direccion;
 	}
+	
 
-	public String getEstadoCivil() {
-		return estadoCivil;
-	}
-
-	public LocalDate getFechaDeNacimiento() {
-		return fechaDeNacimiento;
-	}
-
-	public int getSueldoBasico() {
-		return sueldoBasico;
+	
+	public Double getSueldoNeto() {
+		return this.getSueldoBruto() - this.getRetenciones();
 	}
 	
-	public float getSueldoNeto() {
-		return sueldoBruto() - retenciones();
-	}
+	public abstract Double getRetenciones();
 	
+	public abstract Double getSueldoBruto();
 	
-	public float obraSocial() {
-		return (float) 0.10;
-	}
+	public abstract String detalleRetencionesAplicadas();
 	
-	
-	public int edad() {
-		return (Period.between(fechaDeNacimiento, LocalDate.now())).getYears(); 
-	}
-	
-	public float descuentoObraSocial() {
-		return sueldoBruto() * obraSocial();
-	}
-	
-	public abstract int sueldoBruto();
-	
-	public abstract float retenciones();
+	public abstract String conformacionSueldoBruto();
 	
 }
