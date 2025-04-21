@@ -5,8 +5,13 @@ import java.util.List;
 
 public class Empresa {
 	
-	private List<Empleado> empleados = new ArrayList<Empleado>();
-	private List<ReciboDeHaberes> recibosHaberes = new ArrayList<ReciboDeHaberes>();
+	private List<Empleado> empleados;
+	private List<ReciboDeHaberes> recibosHaberes;
+	
+	public Empresa() {
+		this.empleados = new ArrayList<Empleado>();
+		this.recibosHaberes = new ArrayList<ReciboDeHaberes>();
+	}
 	
 	public Double montoTotalRetencionesDeEmpleados() {
 		Double retenciones = (double) 0;

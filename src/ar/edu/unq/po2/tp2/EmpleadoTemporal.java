@@ -13,6 +13,7 @@ public class EmpleadoTemporal extends Empleado{
 		this.cantHorasExtras = horasExtras;
 	}
 	
+	@Override
 	public Double getRetenciones() {
 		Double sueldoBruto = this.getSueldoBruto();
 		Double obraSocial = (sueldoBruto * 10) / 100;
@@ -21,10 +22,12 @@ public class EmpleadoTemporal extends Empleado{
 		return obraSocial + retencionPorEdad + aportesJubilatorios;
 	}
 	
+	@Override
 	public Double getSueldoBruto() {
 		return this.getSueldoBasico() + 40* cantHorasExtras;
 	}
 	
+	@Override
 	public String detalleRetencionesAplicadas() {
 		Double sueldoBruto = this.getSueldoBruto();
 		Double obraSocial = sueldoBruto * 0.1;
@@ -36,6 +39,7 @@ public class EmpleadoTemporal extends Empleado{
 				+ "Retención por edad: " + retencionPorEdad.toString();
 	}
 	
+	@Override
 	public String conformacionSueldoBruto() {
 		Integer horasExtras = this.cantHorasExtras;
 		return "El sueldo bruto está conformado por los siguientes montos: \n" 

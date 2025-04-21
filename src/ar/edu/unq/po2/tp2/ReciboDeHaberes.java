@@ -7,8 +7,8 @@ public class ReciboDeHaberes {
 	private String nombreEmpleado;
 	private String direccionEmpleado;
 	private LocalDate fechaDeEmision;
-	private Float sueldoBruto;
-	private Float sueldoNeto;
+	private Double sueldoBruto;
+	private Double sueldoNeto;
 	private String desgloseDeConceptos;
 	
 	public ReciboDeHaberes(Empleado e) {

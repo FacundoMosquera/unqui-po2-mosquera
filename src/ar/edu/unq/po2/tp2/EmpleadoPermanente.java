@@ -15,14 +15,15 @@ public class EmpleadoPermanente extends Empleado {
 		this.tieneConyugue = conyugue;
 	}
 	
-	
+	@Override
 	public Double getSueldoBruto() {
 		int bonoConyugue = ((this.tieneConyugue) ? 100 : 0);
 		int bonoHijos = this.cantHijos * 150;
 		int bonoAntiguedad = this.antiguedad * 50;
 		return this.getSueldoBasico() + bonoConyugue + bonoHijos + bonoAntiguedad;
 	}
-		
+	
+	@Override
 	public Double getRetenciones() {
 		Double sueldoBruto = this.getSueldoBruto();	
 		Double obraSocial = sueldoBruto * 0.1 + 20 * cantHijos;
@@ -30,6 +31,7 @@ public class EmpleadoPermanente extends Empleado {
 		return obraSocial + aportesJubilatorios;
 	}
 	
+	@Override
 	public String detalleRetencionesAplicadas() {
 		Double sueldoBruto = this.getSueldoBruto();
 		Double obraSocial = (sueldoBruto *10) / 100 + 20 * this.cantHijos;
@@ -39,6 +41,7 @@ public class EmpleadoPermanente extends Empleado {
 				+ "AportesJubilatorios: " + aportesjubilatorios.toString() ;
 	}
 	
+	@Override
 	public String conformacionSueldoBruto() {
 		Integer bonoHijos = this.cantHijos * 150;
 		Integer bonoConyugue = ((this.tieneConyugue) ? 100 : 0);
