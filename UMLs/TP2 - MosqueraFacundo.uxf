@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>160</y>
+      <w>340</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Empresa
+--
+-empleados: List&lt;Empleado&gt;
+-recibosHaberes: List&lt;ReciboDeHaberes&gt;
+--
++liquidacionDeSueldos(): void
++montoTotalRetencionesDeEmpleados(): Double
++montoTotalSueldosBrutosDeEmpleados(): Double
++montoTotalSueldosNetoDeEmpleados(): Double     
++getEmpleados(): List&lt;Empleado&gt;
++getRecibosHaberes(): List&lt;ReciboDeHaberes&gt;
++contratarEmpleado(Empleado):void
++despedirEmpleado(Empleado):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>300</y>
+      <w>270</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>/Empleado/
+--
+-nombre: String
+-direccion: String
+-estadoCivil: String
+-fechaDeNacimiento: LocalDate
+-sueldoBasico: Double
+--
++getEdad(): Int
+/+getSueldoBruto():Double/
+/+getRetenciones(): Double/
++getSueldoNeto(): Double
+/+detalleRetencionesAplicadas(): String/
+/+conformacionSueldoBruto(): String/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>640</y>
+      <w>260</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>EmpleadoPermanente
+--
+-cantDeHijos: int
+-antigüedad: int
+-conyugue: Boolean
+--
++getSueldoBruto():Double
++getRetenciones(): Double
++detalleRetencionesAplicadas(): String
++conformacionSueldoBruto(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>640</y>
+      <w>260</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>EmpleadoTemporal
+--
+-fechaFinDesignacion: Date
+-cantHorasExtras: int
+--
++getSueldoBruto():Double
++getRetenciones(): Double
++detalleRetencionesAplicadas(): String
++conformacionSueldoBruto(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>160</y>
+      <w>220</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>ReciboDeHaberes
+--
+-nombreEmpleado: String
+-direccionEmpleado: String
+-fechaDeEmision: LocalDate
+-sueldoBruto: Float
+-sueldoNeto: Float
+-desgloseDeConceptos: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>540</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>610</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>610</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>200</y>
+      <w>290</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;tiene&gt;&gt;
+m1=*</panel_attributes>
+    <additional_attributes>270.0;220.0;50.0;220.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>190</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;crea&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1230</x>
+      <y>640</y>
+      <w>260</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>EmpleadoContratado
+--
+-nroDeContrato: int
+-medioDePago: String
+--
++getSueldoBruto():Double
++getRetenciones():Double
++detalleRetencionesAplicadas(): String
++conformacionSueldoBruto(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>610</y>
+      <w>310</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;10.0;290.0;30.0</additional_attributes>
+  </element>
+</diagram>
