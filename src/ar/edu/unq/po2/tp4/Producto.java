@@ -26,5 +26,18 @@ public class Producto {
 		return precioBase;
 	}
 	
+	public boolean esPrecioCuidado() {
+		return precioCuidado;
+	}
+	
+	public void aumentarPrecio(Double aumento) {
+		this.precioBase += aumento;
+	}
+	
+	public void bajarPrecio(Double monto) throws Exception{
+		if (monto > precioBase) {
+			throw new Exception("El monto a bajar no puede ser mayor al precioBase");
+		} else {this.precioBase -= monto;}
+	}
 	
 }
