@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>210</y>
+      <w>260</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Caja
+--
+-montoDelCarritoDeCompras: Double
+-carritoDeCompras: List&lt;Item&gt;
+--
++registrarProducto(Item): void
++getMontoTotalAPagar(): Double
++confirmarCompra(): void
++reiniciarCaja(): void
++eliminarProductoDeLaCaja(Item): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>440</y>
+      <w>180</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Producto
+--
+#precio: Double
+-nombre: String
+-mercado: Mercado
+--
++getMonto() : Double
+-getPrecio(): Double
++getNombre(): String
++getMercado(): Mercado
++accionExtra(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>650</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ProductoDeCooperativa
+--
+--
+-getPrecio(): Double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>600</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>230</y>
+      <w>270</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>660</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Servicio
+--
+-costoPorUnidad: Double
+-unidadesConsumidas: int
+--
++getCostoPorUnidad(): Double
++getUnidadesConsumidas(): int
++getMonto(): Double
++accionExtra(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1240</x>
+      <y>660</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Impuesto
+--
+-tasaEnPesos: Double
+--
++getMonto(): Double
++accionExtra(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1620</x>
+      <y>390</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/Agencia/
+--
++registrarPago(Factura): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>190</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/Item/
+--
++getMonto(): Double
++accionExtra(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>260</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>350</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>350</y>
+      <w>290</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;10.0;270.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Mercado
+--
+-stock: List&lt;Producto&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>400</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/Factura/
+--
+-agencia: Agencia
+--
++getMonto(): Double
++getAgencia(): Agencia</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>560</y>
+      <w>310</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;100.0;10.0;20.0;290.0;20.0;290.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>480</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1230</x>
+      <y>280</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Sólo comparten un estado: agencia.
+¿Superclase o interfaz?
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>410</y>
+      <w>360</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>340.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>260</y>
+      <w>590</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;230.0;570.0;230.0</additional_attributes>
+  </element>
+</diagram>
