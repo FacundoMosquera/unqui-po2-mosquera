@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>300</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Banco
+--
+
+--
++nuevoCliente(Cliente): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>300</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-nombre: String
+-apellido: String
+-direccion: String
+-edad: int
+-sueldoNetoMensual: Double
+-banco: Banco
+--
++getSueldoNetoAnual(): Double
++solicitarUnCredito(Double): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>310</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>300</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>SolicitudDeCredito
+--
+-monto: Double
+-cliente: Cliente
+-plazoEnMeses: int
+--
++getCuotaMensual(): Double
++cumpleLosRequisitos(): Boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>600</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Propiedad
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
