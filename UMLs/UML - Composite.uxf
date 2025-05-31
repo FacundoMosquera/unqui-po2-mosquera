@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>10</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Parcela
+--
+/+getPrecio(): Float/
++setDivision(Parcela, Parcela, Parcela, Parcela): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>210</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Soja
+--
++getPrecio():Float
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>210</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Trigo
+--
++getPrecio():Float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>210</y>
+      <w>350</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ParcelaCompuesta
+--
++getPrecio(): Float
++setDivision(Parcela, Parcela, Parcela, Parcela): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>120</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>160</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;480.0;10.0;480.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>160</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>0</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Ejercicio 2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>310</y>
+      <w>1600</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>350</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Ejercicio 3
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>350</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Unidad
+--
+/+caminar(Destino): void/
++añadirAlEjercito(Unidad): void
++sacarDelEjercito(Unidad): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>560</y>
+      <w>230</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ejercito
+--
++caminar(Destino): void
++añadirAlEjercito(Unidad): void
++sacarDelEjercito(Unidad): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>560</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ingeniero
+--
++caminar(Destino): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>560</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Caballero
+--
++caminar(Destino): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>30</y>
+      <w>380</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;parcelas&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0;350.0;220.0;250.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>450</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>510</y>
+      <w>460</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;440.0;10.0;440.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>380</y>
+      <w>390</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;unidades&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0;300.0;220.0;210.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>670</y>
+      <w>1600</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>710</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Ejercicio 4
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>700</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+FileSystem
+-
++totalSize(): int
++printStructure(): void
++lastModified(): X
++oldestElement(): X
++addFile(FileSystem):void
++removeFile(FileSystem):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>930</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Archivo
+-
++getExtension(): String
++getName(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>930</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Directorio
+-
++addFile(FileSystem):void
++removeFile(FileSystem):void
++totalSize(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>840</y>
+      <w>80</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;60.0;50.0;10.0;50.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>840</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;100.0;50.0;100.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>720</y>
+      <w>300</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;elementos&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0;200.0;240.0;150.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1080</y>
+      <w>1600</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>1120</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Ejercicio 5
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>1160</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IShapeShifte
+-
++compose(IShapeShifte): IShapeShifte
++deepest(): int
++flat(): IShapeShifte
++values(): List&lt;Integer&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>1340</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+ComponentShape
+-
++compose(IShapeShifte): IShapeShifte
++deepest(): int
++flat(): IShapeShifte
+/+values(): List&lt;Integer&gt;/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>1270</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>1530</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>CompositeShape
+-
+_+new(List&lt;IShapeShifte&gt;)_
++deepest(): int
++flat(): IShapeShifte
++values(): List&lt;Integer&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>1530</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LeafShape
+-
+_+new(Integer)_
++values(): List&lt;Integer&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>1180</y>
+      <w>460</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;shapes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;10.0;380.0;410.0;150.0;410.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>1450</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>1480</y>
+      <w>330</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;310.0;10.0;310.0;50.0</additional_attributes>
+  </element>
+</diagram>
