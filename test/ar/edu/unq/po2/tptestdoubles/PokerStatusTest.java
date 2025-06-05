@@ -19,7 +19,7 @@ public class PokerStatusTest {
 	private CartaDePoker c9;
 	private CartaDePoker c10;
 	private CartaDePoker c11;
-
+	
 	
 // variable para la clase PokerStatus
 	private PokerStatus ps;
@@ -73,4 +73,16 @@ public class PokerStatusTest {
 		assertEquals(ps.verificar(c1, c2, c6, c11, c9), "Nada");
 	}
 	
+	@Test
+	void testElJugadorTiene5CartasConElMismoNumeroPeroPalosVariados() {
+		c1 = new CartaDePoker(RangoDeCarta.REINA, Palo.TREBOL);
+		c2 = new CartaDePoker(RangoDeCarta.REINA, Palo.DIAMANTE);
+		c3 = new CartaDePoker(RangoDeCarta.REINA, Palo.CORAZON);
+		c4 = new CartaDePoker(RangoDeCarta.REINA, Palo.PICA);
+		c5 = new CartaDePoker(RangoDeCarta.REINA, Palo.TREBOL);
+		
+		String resultado = ps.verificar(c1, c2, c3, c4, c5);
+		assertEquals(resultado, "Nada");
+		
+	}
 }

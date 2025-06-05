@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 public class PokerStatus {
 
-	private Map<CartaDePoker, Integer> cartas;
+	private Map<String, Integer> cartas;
 	private Map<String, Integer> colores;
 	
 	public PokerStatus() {
@@ -56,17 +56,18 @@ public class PokerStatus {
 		
 		//El valor del map representa las veces que aparece la carta/palo.
 		for(CartaDePoker c : aIterar) {
-			cartas.put(c, cartas.getOrDefault(c, 0) + 1);
+			String cartaString = c.getNumero().name() + "-" + c.getPalo().name();
+			cartas.put(cartaString, cartas.getOrDefault(cartaString, 0) + 1);
 			colores.put(c.getPalo().color(), colores.getOrDefault(c.getPalo().color(), 0) + 1);
 		}
 		
 		
 		if (cartas.values().stream().anyMatch(n -> n > 3))
 			return "Poker";
-		if (cartas.values().contains(3))
-			return "Trio";
 		if(colores.values().contains(5))
 			return "Color";
+		if (cartas.values().contains(3))
+			return "Trio";
 		return "Nada";
 	}
 	
