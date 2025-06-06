@@ -4,11 +4,17 @@ import java.time.LocalDate;
 
 public class ReciboDeHaberes {
 	
+	@SuppressWarnings("unused")
 	private String nombreEmpleado;
+	@SuppressWarnings("unused")
 	private String direccionEmpleado;
+	@SuppressWarnings("unused")
 	private LocalDate fechaDeEmision;
+	@SuppressWarnings("unused")
 	private Double sueldoBruto;
+	@SuppressWarnings("unused")
 	private Double sueldoNeto;
+	@SuppressWarnings("unused")
 	private String desgloseDeConceptos;
 	
 	public ReciboDeHaberes(Empleado e) {

@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class PruebaTiempo {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		LocalDate dia = LocalDate.now();
 		LocalDate dia2 = LocalDate.now();
