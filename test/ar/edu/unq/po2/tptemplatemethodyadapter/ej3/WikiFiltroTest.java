@@ -92,4 +92,5 @@ public class WikiFiltroTest {
 		assertEquals(sameLetter.getSimilarPages(p1, paginas).size(), 1);
 		
 	}
+	
 }
