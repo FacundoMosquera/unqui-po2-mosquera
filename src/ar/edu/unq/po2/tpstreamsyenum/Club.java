@@ -52,7 +52,7 @@ public class Club {
 				.filter(a -> a.getDeporte() == d)
 				.min(Comparator.comparingInt(a -> a.getCostoDeLaActividad()));
 	}
-	
+
 	public Map<Deporte, ActividadSemanal> lasActividadesMasEconomicasDeCadaDeporte() {
 		List<Deporte> deportes = actividades.stream().map(a -> a.getDeporte()).distinct().toList();
 		Map<Deporte, ActividadSemanal> resultado = new HashMap<>();
