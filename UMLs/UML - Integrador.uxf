@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>240</y>
-      <w>250</w>
-      <h>160</h>
+      <x>198</x>
+      <y>517</y>
+      <w>275</w>
+      <h>209</h>
     </coordinates>
     <panel_attributes>Muestra
 -
 -fechaDeCreacion: LocalDate
+-ubicacion: Ubicacion
+-autor: Usuario
 -
 _+new(Foto, tipoDeOpinion, LocalDate)_
 +getFoto(): Foto
 +getResultadoActual(): tipoDeOpinion
 +getFechaDeCreacion(): LocalDate
-</panel_attributes>
++getUbicacion(): Ubicacion
++getAutor(): Usuario</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>970</x>
-      <y>300</y>
-      <w>120</w>
-      <h>60</h>
+      <x>792</x>
+      <y>583</y>
+      <w>132</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>EstadoMuestra
 -</panel_attributes>
@@ -35,10 +38,10 @@ _+new(Foto, tipoDeOpinion, LocalDate)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>430</y>
-      <w>110</w>
-      <h>60</h>
+      <x>649</x>
+      <y>726</y>
+      <w>121</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>Abierta
 -</panel_attributes>
@@ -47,10 +50,10 @@ _+new(Foto, tipoDeOpinion, LocalDate)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>430</y>
-      <w>100</w>
-      <h>60</h>
+      <x>803</x>
+      <y>726</y>
+      <w>110</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>SoloExpertos
 -</panel_attributes>
@@ -59,10 +62,10 @@ _+new(Foto, tipoDeOpinion, LocalDate)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>430</y>
-      <w>110</w>
-      <h>60</h>
+      <x>946</x>
+      <y>726</y>
+      <w>121</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>Verificada
 -</panel_attributes>
@@ -71,10 +74,10 @@ _+new(Foto, tipoDeOpinion, LocalDate)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>250</x>
-      <y>240</y>
-      <w>110</w>
-      <h>60</h>
+      <x>0</x>
+      <y>517</y>
+      <w>121</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 Foto
@@ -85,10 +88,10 @@ Foto
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1390</x>
-      <y>180</y>
-      <w>210</w>
-      <h>180</h>
+      <x>1199</x>
+      <y>374</y>
+      <w>231</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoDeOpinion
@@ -99,47 +102,49 @@ VINCHUCA_GUASAYANA
 CHINCHE_FOLIADA
 PHTIA-CHINCHE
 NINGUNA
-IMAGEN_POCO_CLARA</panel_attributes>
+IMAGEN_POCO_CLARA
+NO_DEFINIDO</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1410</x>
-      <y>480</y>
-      <w>190</w>
-      <h>90</h>
+      <x>1210</x>
+      <y>781</y>
+      <w>275</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 Filtro
 -
++filtrar(List&lt;Muestra&gt;): List&lt;Muestra&gt;
 +cumple(Muestra): boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1580</x>
-      <y>650</y>
-      <w>190</w>
-      <h>110</h>
+      <x>1408</x>
+      <y>968</y>
+      <w>264</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>FiltroAND
 -
--filtro1: Filtro
--filtro2: Filtro
+-filtros: List&lt;Filtro&gt;
 -
 _+new(Filtro, Filtro)_
++filtrar(List&lt;Muestra&gt;): List&lt;Muestra&gt;
 +cumple(Muestra): boolean </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1490</x>
-      <y>560</y>
-      <w>200</w>
-      <h>110</h>
+      <x>1364</x>
+      <y>869</y>
+      <w>220</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0;180.0;50.0;180.0;90.0</additional_attributes>
@@ -147,27 +152,27 @@ _+new(Filtro, Filtro)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1800</x>
-      <y>650</y>
-      <w>190</w>
-      <h>110</h>
+      <x>1705</x>
+      <y>968</y>
+      <w>275</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>FiltroOR
 -
--filtro1: Filtro
--filtro2: Filtro
+-filtros: List&lt;Filtro&gt;
 -
 _+new(Filtro, Filtro)_
++filtrar(List&lt;Muestra&gt;): List&lt;Muestra&gt;
 +cumple(Muestra): boolean </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1660</x>
-      <y>600</y>
-      <w>260</w>
-      <h>70</h>
+      <x>1551</x>
+      <y>913</y>
+      <w>286</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;240.0;10.0;240.0;50.0</additional_attributes>
@@ -175,63 +180,66 @@ _+new(Filtro, Filtro)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1590</x>
-      <y>480</y>
-      <w>530</w>
-      <h>230</h>
+      <x>1474</x>
+      <y>781</y>
+      <w>583</w>
+      <h>253</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-&lt;&lt;filtro1&gt;&gt;
-&lt;&lt;filtro2&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;510.0;20.0;510.0;210.0;400.0;210.0</additional_attributes>
+&lt;&lt;filtros&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;510.0;20.0;510.0;210.0;460.0;210.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1700</x>
-      <y>680</y>
-      <w>420</w>
-      <h>160</h>
+      <x>1595</x>
+      <y>1001</y>
+      <w>462</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>400.0;10.0;400.0;140.0;10.0;140.0;10.0;80.0</additional_attributes>
+    <additional_attributes>400.0;10.0;400.0;140.0;10.0;140.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1330</x>
-      <y>650</y>
-      <w>210</w>
-      <h>110</h>
+      <x>1056</x>
+      <y>968</y>
+      <w>275</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>FiltroFecha
 -
 -condicion: Predicate&lt;Muestra&gt;
 -
-
++filtrar(List&lt;Muestra&gt;): List&lt;Muestra&gt;
 +cumple(Muestra): boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
-      <y>560</y>
-      <w>170</w>
-      <h>90</h>
+      <x>616</x>
+      <y>869</y>
+      <w>209</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Usuario
 -
-+getExpertise(): Expertise</panel_attributes>
+-esExpertoValidido: boolean
+-
++getExpertise(): Expertise
++</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>560</y>
-      <w>100</w>
-      <h>90</h>
+      <x>286</x>
+      <y>869</y>
+      <w>110</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Expertise
 -</panel_attributes>
@@ -240,10 +248,10 @@ _+new(Filtro, Filtro)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>560</y>
-      <w>230</w>
-      <h>40</h>
+      <x>385</x>
+      <y>869</y>
+      <w>253</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 &lt;&lt;expertise&gt;&gt;</panel_attributes>
@@ -252,32 +260,32 @@ _+new(Filtro, Filtro)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>250</y>
-      <w>120</w>
-      <h>30</h>
+      <x>110</x>
+      <y>528</y>
+      <w>110</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
-      <y>250</y>
-      <w>300</w>
-      <h>90</h>
+      <x>462</x>
+      <y>528</y>
+      <w>352</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>280.0;70.0;90.0;70.0;90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>300.0;70.0;110.0;70.0;110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
-      <y>350</y>
-      <w>30</w>
-      <h>100</h>
+      <x>847</x>
+      <y>638</y>
+      <w>33</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -285,10 +293,10 @@ _+new(Filtro, Filtro)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>390</y>
-      <w>310</w>
-      <h>60</h>
+      <x>693</x>
+      <y>682</y>
+      <w>341</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0;290.0;10.0;290.0;40.0</additional_attributes>
@@ -296,10 +304,10 @@ _+new(Filtro, Filtro)_
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>320</x>
-      <y>550</y>
-      <w>100</w>
-      <h>70</h>
+      <x>77</x>
+      <y>858</y>
+      <w>110</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>State
 bg=yellow</panel_attributes>
@@ -308,10 +316,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>740</y>
-      <w>120</w>
-      <h>80</h>
+      <x>110</x>
+      <y>1067</y>
+      <w>132</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>Basico
 -</panel_attributes>
@@ -320,10 +328,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>610</x>
-      <y>740</y>
-      <w>120</w>
-      <h>80</h>
+      <x>418</x>
+      <y>1067</y>
+      <w>132</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>Experto
 -</panel_attributes>
@@ -332,10 +340,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>610</x>
-      <y>870</y>
-      <w>120</w>
-      <h>80</h>
+      <x>418</x>
+      <y>1199</y>
+      <w>132</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>ExpertoValidado
 -</panel_attributes>
@@ -344,21 +352,21 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>810</y>
-      <w>30</w>
-      <h>80</h>
+      <x>473</x>
+      <y>1144</y>
+      <w>33</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>640</y>
-      <w>180</w>
-      <h>120</h>
+      <x>165</x>
+      <y>957</y>
+      <w>198</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;160.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
@@ -366,12 +374,94 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
-      <y>680</y>
-      <w>140</w>
-      <h>80</h>
+      <x>330</x>
+      <y>1001</y>
+      <w>176</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0;120.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>990</x>
+      <y>495</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>State
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1617</x>
+      <y>363</y>
+      <w>297</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Ubicacion
+-
+-latitud: double
+-longitud: double
+-
+_+new(double, double)_
++setFormula(FormulaDeDistancia): void
++getLatitud(): double
++getLongitud(): double
++distanciaA(Ubicacion): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2134</x>
+      <y>363</y>
+      <w>330</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+FormulaDeDistancia
+-
++distanciaEntre(Ubicacion, Ubicacion): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1903</x>
+      <y>363</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;formula&gt;&gt;</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2134</x>
+      <y>528</y>
+      <w>330</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>DistanciaEuclidiana
+-
++distanciaEntre(Ubicacion, Ubicacion): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2288</x>
+      <y>440</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>
